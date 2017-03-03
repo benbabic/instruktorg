@@ -4,7 +4,7 @@ defmodule Instruktorg.Repo.Migrations.Process do
   def up do
     create table(:process) do
       add :name,     :string
-      add :steps,    :string
+      add :steps,    :json
       add :category, :string
 
       timestamps()
