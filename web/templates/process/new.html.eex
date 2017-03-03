@@ -1,0 +1,6 @@
+<h2>New process</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: process_path(@conn, :create) %>
+
+<%= link "Back", to: process_path(@conn, :index) %>

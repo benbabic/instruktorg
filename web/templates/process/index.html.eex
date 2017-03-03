@@ -1,0 +1,26 @@
+<h2>Listing processes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for process <- @processes do %>
+    <tr>
+      <td><%= process.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: process_path(@conn, :show, process), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: process_path(@conn, :edit, process), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: process_path(@conn, :delete, process), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New process", to: process_path(@conn, :new) %>

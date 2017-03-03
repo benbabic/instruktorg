@@ -1,0 +1,17 @@
+<h2>Show process</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @process.name %>
+    <strong>Steps:</strong>
+    <%= @process.steps %>
+    <strong>Category:</strong>
+    <%= @process.category %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: process_path(@conn, :edit, @process) %>
+<%= link "Back", to: process_path(@conn, :index) %>
