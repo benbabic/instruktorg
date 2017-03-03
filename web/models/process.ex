@@ -7,6 +7,8 @@ defmodule Instruktorg.Process do
     field :name,     :string
     field :steps,    :map
     field :category, :string
+
+    timestamps
   end
 
   def changeset(process, params \\ %{}) do
